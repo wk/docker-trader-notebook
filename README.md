@@ -13,7 +13,10 @@ Some of the components included:
 * Backtesting
     * [zipline](https://www.zipline.io/)
     * [backtrader](https://www.backtrader.com/)
-* Misc
+* Plotting
+    * [ggplot](http://http://ggplot.yhathq.com/)
+    * [plotly](https://plot.ly/)
+* NLP
     * [spaCy](https://spacy.io/)
 
 *Due to licensing restrictions, this container is only made available as a Dockerfile to be built by the end user, and not as a ready-to-run pre-built container.*
