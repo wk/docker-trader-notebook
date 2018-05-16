@@ -11,7 +11,7 @@ WORKDIR /tmp/twsapi-build
 ADD http://interactivebrokers.github.io/downloads/twsapi_macunix.973.07.zip .
 RUN unzip twsapi_macunix.973.07.zip
 WORKDIR /tmp/twsapi-build/IBJts/source/pythonclient
-RUN python setup.py bdist_wheel
+RUN python3 setup.py bdist_wheel
 
 # -- stage 2: build the trader notebook
 FROM jupyter/datascience-notebook:latest
@@ -25,7 +25,7 @@ RUN pip install zipline backtrader ib_insync jupyter_dashboards ggplot plotly sp
 RUN zipline ingest -b quantopian-quandl
 
 # Download spacy english language data
-RUN python -m spacy download en
+RUN python3 -m spacy download en
 
 # install twsapi from stage 1
 COPY --from=twsapi-build \
