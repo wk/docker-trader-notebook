@@ -1,5 +1,5 @@
 # -- stage 1: build a wheel of twsapi for python, as ib_insync requires it
-FROM ubuntu:xenial as twsapi-build
+FROM ubuntu:bionic as twsapi-build
 
 RUN apt-get -yq update && \
     apt-get -yq install python3 python3-setuptools python3-wheel unzip
