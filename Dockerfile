@@ -30,8 +30,10 @@ RUN pip install ggplot plotly bqplot mpld3
 RUN pip install backtrader ib_insync
 
 # Additional work
-RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
 RUN jupyter labextension install bqplot
+RUN conda install -y phantomjs selenium
+RUN conda install -yc pyviz datashader holoviews flask
+RUN jupyter labextension install @pyviz/jupyterlab_pyviz
 
 # Install zipline via conda then ingest zipline quantopian-quandl metadata bundle
 # RUN conda install -c Quantopian zipline

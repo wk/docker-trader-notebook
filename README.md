@@ -14,6 +14,8 @@ Some of the components included:
     * [backtrader](https://www.backtrader.com/)
 * Plotting
     * [bqplot](https://github.com/bloomberg/bqplot)
+    * [datashader](https://github.com/pyviz/datashader)
+    * [holoviews](https://github.com/pyviz/holoviews)
     * [ggplot](http://http://ggplot.yhathq.com/)
     * [mpld3](https://github.com/mpld3/mpld3)
     * [plotly](https://plot.ly/)
