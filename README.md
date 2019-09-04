@@ -11,10 +11,11 @@ Some of the components included:
     * [ib_insync](https://github.com/erdewit/ib_insync)
     * [twsapi](https://interactivebrokers.github.io/)
 * Backtesting
-    * [zipline](https://www.zipline.io/)
     * [backtrader](https://www.backtrader.com/)
 * Plotting
+    * [bqplot](https://github.com/bloomberg/bqplot)
     * [ggplot](http://http://ggplot.yhathq.com/)
+    * [mpld3](https://github.com/mpld3/mpld3)
     * [plotly](https://plot.ly/)
 
 *Due to licensing restrictions, this container is only made available as a Dockerfile to be built by the end user, and not as a ready-to-run pre-built container.*
