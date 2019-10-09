@@ -19,6 +19,8 @@ Some of the components included:
     * [ggplot](http://http://ggplot.yhathq.com/)
     * [mpld3](https://github.com/mpld3/mpld3)
     * [plotly](https://plot.ly/)
+* Misc
+    * lxml, html5lib for pandas html_read
 
 *Due to licensing restrictions, this container is only made available as a Dockerfile to be built by the end user, and not as a ready-to-run pre-built container.*
 
