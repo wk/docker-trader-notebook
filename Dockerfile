@@ -28,6 +28,8 @@ USER $NB_USER
 RUN pip install ggplot plotly bqplot mpld3
 # Additional financial markets packages
 RUN pip install backtrader ib_insync
+# Required for pandas read_html 
+RUN pip install html5lib lxml
 
 # Additional work
 RUN jupyter labextension install bqplot
