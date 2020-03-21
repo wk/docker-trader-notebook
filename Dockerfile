@@ -8,8 +8,8 @@ WORKDIR /tmp/twsapi-build
 
 # build twsapi for python
 # Subject to licensing conditions at http://interactivebrokers.github.io/
-ADD http://interactivebrokers.github.io/downloads/twsapi_macunix.976.01.zip .
-RUN unzip twsapi_macunix.976.01.zip
+ADD http://interactivebrokers.github.io/downloads/twsapi_macunix.979.01.zip .
+RUN unzip twsapi_macunix.979.01.zip
 WORKDIR /tmp/twsapi-build/IBJts/source/pythonclient
 RUN python3 setup.py bdist_wheel
 
@@ -37,13 +37,13 @@ RUN conda install -y phantomjs selenium colorcet
 RUN conda install -yc pyviz datashader holoviews hvplot flask
 RUN jupyter labextension install @pyviz/jupyterlab_pyviz
 
-# Install zipline via conda then ingest zipline quantopian-quandl metadata bundle
-# RUN conda install -c Quantopian zipline
+# Install zipline and pyfolio via conda then ingest zipline quantopian-quandl metadata bundle
+# RUN conda install -c Quantopian install zipline pyfolio
 # RUN zipline ingest -b quantopian-quandl
 
 # install twsapi from stage 1
 COPY --from=twsapi-build \
-    /tmp/twsapi-build/IBJts/source/pythonclient/dist/ibapi-9.76.1-py3-none-any.whl \
+    /tmp/twsapi-build/IBJts/source/pythonclient/dist/ibapi-9.79.1-py3-none-any.whl \
     /tmp/
-RUN pip install /tmp/ibapi-9.76.1-py3-none-any.whl
+RUN pip install /tmp/ibapi-9.79.1-py3-none-any.whl
 
