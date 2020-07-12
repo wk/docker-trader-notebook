@@ -22,19 +22,24 @@ USER $NB_USER
 # RUN conda update -n base conda
 # RUN conda update --all
 
-# pip installs
 # bokeh, scikit-learn, tqdm are all part of jupyter/datascience-notebook
-# Additional visualization and plotting packages
-RUN pip install ggplot plotly bqplot mpld3
-# Additional financial markets packages
-RUN pip install backtrader ib_insync
-# Required for pandas read_html 
-RUN pip install html5lib lxml
 
-# Additional work
+# conda installs (plotly, bqplot, mpld3, html5lib, lxml, phanomjs, 
+#                 selenium, colorcet, datashader, holoviews, hvplot,
+#                 flask)
+COPY additional-requirements-conda.txt /tmp/
+RUN conda install --yes --file /tmp/additional-requirements-conda.txt && \
+    fix-permissions $CONDA_DIR && \
+    fix-permissions /home/$NB_USER
+
+# pip installs (ggplot, backtrader, ib_insync)
+COPY additional-requirements-pip.txt /tmp/
+RUN pip install --requirement /tmp/additional-requirements-pip.txt && \
+    fix-permissions $CONDA_DIR && \
+    fix-permissions /home/$NB_USER
+
+# Jupyter lab extensions 
 RUN jupyter labextension install bqplot
-RUN conda install -y phantomjs selenium colorcet
-RUN conda install -yc pyviz datashader holoviews hvplot flask
 RUN jupyter labextension install @pyviz/jupyterlab_pyviz
 
 # Install zipline and pyfolio via conda then ingest zipline quantopian-quandl metadata bundle
