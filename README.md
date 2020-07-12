@@ -15,6 +15,7 @@ Some of the components included:
 * Plotting
     * [bqplot](https://github.com/bloomberg/bqplot)
     * [datashader](https://github.com/pyviz/datashader)
+    * [ggplot](http://http://ggplot.yhathq.com/)
     * [holoviews](https://github.com/pyviz/holoviews)
     * [mpld3](https://github.com/mpld3/mpld3)
     * [plotly](https://plot.ly/)

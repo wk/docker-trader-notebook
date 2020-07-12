@@ -1,13 +1,13 @@
-# Additional visualization and plotting packages
+# additional visualization and plotting packages
 plotly
 bqplot
 mpld3
 
-# Required for pandas read_html
+# required for pandas read_html
 html5lib
 lxml
 
-# Required for pyviz
+# required for pyviz
 phantomjs
 selenium
 colorcet
@@ -15,5 +15,4 @@ datashader
 holoviews
 hvplot
 flask
-
 
