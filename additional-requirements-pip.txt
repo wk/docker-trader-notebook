@@ -6,3 +6,6 @@ backtrader
 
 # ib_insync
 ib_insync
+
+# cufflinks for plotly
+cufflinks

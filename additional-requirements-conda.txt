@@ -1,5 +1,6 @@
 # additional visualization and plotting packages
 plotly
+chart-studio
 bqplot
 mpld3
 

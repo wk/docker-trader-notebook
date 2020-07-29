@@ -18,9 +18,11 @@ Some of the components included:
     * [ggplot](http://http://ggplot.yhathq.com/)
     * [holoviews](https://github.com/pyviz/holoviews)
     * [mpld3](https://github.com/mpld3/mpld3)
-    * [plotly](https://plot.ly/)
+    * [plotly](https://plot.ly/), with [chart-studio](https://plotly.com/chart-studio/) and [cufflinks](https://github.com/santosjorge/cufflinks)
 * Misc
     * lxml, html5lib for pandas html_read
+
+Components can added or removed by modifying the `additional-requirements-conda.txt` and `additional-requirements-pip.txt` files prior to building the image.
 
 *Due to licensing restrictions, this container is only made available as a Dockerfile to be built by the end user, and not as a ready-to-run pre-built container.*
 
