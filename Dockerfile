@@ -39,8 +39,13 @@ RUN pip install --requirement /tmp/additional-requirements-pip.txt && \
     fix-permissions /home/$NB_USER
 
 # Jupyter lab extensions 
-RUN jupyter labextension install bqplot
-RUN jupyter labextension install @pyviz/jupyterlab_pyviz
+RUN jupyter labextension install bqplot --no-build
+RUN jupyter labextension install @pyviz/jupyterlab_pyviz --no-build
+RUN jupyter labextension install jupyterlab-plotly@4.9.0 --no-build
+RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager plotlywidget@4.9.0 --no-build
+
+# Build all jupyter lab extensions at once
+RUN jupyter lab build
 
 # Install zipline and pyfolio via conda then ingest zipline quantopian-quandl metadata bundle
 # RUN conda install -c Quantopian install zipline pyfolio
