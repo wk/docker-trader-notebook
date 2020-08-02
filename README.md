@@ -21,6 +21,7 @@ Some of the components included:
     * [plotly](https://plot.ly/), with [chart-studio](https://plotly.com/chart-studio/) and [cufflinks](https://github.com/santosjorge/cufflinks)
 * Misc
     * lxml, html5lib for pandas html_read
+    * [pandas-datareader](https://github.com/pydata/pandas-datareader)
 
 Components can added or removed by modifying the `additional-requirements-conda.txt` and `additional-requirements-pip.txt` files prior to building the image.
 

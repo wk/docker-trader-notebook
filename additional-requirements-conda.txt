@@ -17,3 +17,5 @@ holoviews
 hvplot
 flask
 
+# pandas datareader
+pandas-datareader
