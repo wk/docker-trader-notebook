@@ -19,3 +19,10 @@ flask
 
 # pandas datareader
 pandas-datareader
+
+# sqlalchemy and pymysql
+sqlalchemy
+pymysql
+
+# nltk
+nltk
