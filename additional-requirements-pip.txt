@@ -9,3 +9,7 @@ ib_insync
 
 # cufflinks for plotly
 cufflinks
+
+# tensorflow
+tensorflow==2.3.0
+

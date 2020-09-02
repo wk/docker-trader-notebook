@@ -21,6 +21,8 @@ Some of the components included:
     * [plotly](https://plot.ly/), with [chart-studio](https://plotly.com/chart-studio/) and [cufflinks](https://github.com/santosjorge/cufflinks)
 * Natural Language Processing
     * [nltk](https://github.com/nltk/nltk)
+* Machine Learning
+    * [TensorFlow](https://www.tensorflow.org/)
 * Misc
     * lxml, html5lib for pandas html_read
     * [pandas-datareader](https://github.com/pydata/pandas-datareader)

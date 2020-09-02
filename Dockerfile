@@ -1,5 +1,5 @@
 # -- stage 1: build a wheel of twsapi for python, as ib_insync requires it
-FROM ubuntu:bionic-20190612@sha256:9b1702dcfe32c873a770a32cfd306dd7fc1c4fd134adfb783db68defc8894b3c as twsapi-build
+FROM ubuntu:focal-20200703@sha256:d5a6519d9f048100123c568eb83f7ef5bfcad69b01424f420f17c932b00dea76 as twsapi-build
 
 RUN apt-get -yq update && \
     apt-get -yq install python3 python3-setuptools python3-wheel unzip
@@ -29,12 +29,13 @@ USER $NB_USER
 #                 flask)
 COPY additional-requirements-conda.txt /tmp/
 RUN conda install --yes --file /tmp/additional-requirements-conda.txt && \
+    conda clean --all -f -y && \
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER
 
 # pip installs (ggplot, backtrader, ib_insync)
 COPY additional-requirements-pip.txt /tmp/
-RUN pip install --requirement /tmp/additional-requirements-pip.txt && \
+RUN pip install --quiet --no-cache-dir --requirement /tmp/additional-requirements-pip.txt && \
     fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER
 
