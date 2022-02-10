@@ -11,5 +11,5 @@ ib_insync
 cufflinks
 
 # tensorflow
-tensorflow==2.5.1
+tensorflow==2.5.3
 
